@@ -35,6 +35,8 @@ FingerNFinger.set('nil')
 TendomGait = StringVar()
 TendomGait.set('nil')
 
+Spurling = StringVar()
+Spurling.set('nil')
 Hoffman = StringVar()
 Hoffman.set('nil')
 SAT = StringVar()
@@ -77,7 +79,8 @@ def insertTEXT():
     txt.insert('end', 'Hoffman test: ' + Hoffman.get() + '\n')
     txt.insert('end', 'Shoulder abduction test: ' + SAT.get() + '\n')
     txt.insert('end', 'Axial manual traction: ' + AMT.get() + '\n')
-    txt.insert('end', 'Lhermitte\'s sign: ' + AMT.get() + '\n\n')
+    txt.insert('end', 'Lhermitte\'s sign: ' + AMT.get() + '\n')
+    txt.insert('end', 'Spurling test: ' + Spurling.get() + '\n\n')
     txt.insert('end', '---Lumbar---\n')
     txt.insert('end', 'SLRT: ' + SLRT.get() + '\n')
     txt.insert('end', 'Reverse SLRT: ' + RSLRT.get() + '\n')
@@ -146,6 +149,10 @@ Radiobutton(Cervical, text='negative', variable=AMT, value='negative').grid(row=
 Label(Cervical, text='lhermitte sign: ').grid(row=3)
 Radiobutton(Cervical, text='positive', variable=LMT, value='positive').grid(row=3, column=1)
 Radiobutton(Cervical, text='negative', variable=LMT, value='negative').grid(row=3, column=2)
+Label(Cervical, text='Spurling test: ').grid(row=4)
+Radiobutton(Cervical, text='positive',variable=Spurling, value='positive').grid(row=4, column=1)
+Radiobutton(Cervical, text='negative', variable=Spurling, value='negative').grid(row=4,column=2)
+
 Cervical.pack(padx=20, pady=10, anchor='w')
 
 # Lumbar PE
